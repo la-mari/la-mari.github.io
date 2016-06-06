@@ -60,85 +60,85 @@ function demo() {
  *  lightbox
  *  =======================================*/
 
-function lightbox() {
+// function lightbox() {
 
-    $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
-        event.preventDefault();
-        $(this).ekkoLightbox();
-    });
-}
+//     $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
+//         event.preventDefault();
+//         $(this).ekkoLightbox();
+//     });
+// }
 
 /* sliders */
 
-function sliders() {
-    if ($('.owl-carousel').length) {
+// function sliders() {
+//     if ($('.owl-carousel').length) {
 
 
-        $(".testimonials").owlCarousel({
-            items: 4,
-            itemsDesktopSmall: [1100, 3],
-            itemsTablet: [768, 2],
-            itemsMobile: [480, 1]
-        });
-    }
+//         $(".testimonials").owlCarousel({
+//             items: 4,
+//             itemsDesktopSmall: [1100, 3],
+//             itemsTablet: [768, 2],
+//             itemsMobile: [480, 1]
+//         });
+//     }
 
-}
+// }
 
-function map() {
+// function map() {
 
-    if ($('#map').length > 0) {
-
-
-        function initMap() {
-
-            var location = new google.maps.LatLng(50.0875726, 14.4189987);
-
-            var mapCanvas = document.getElementById('map');
-            var mapOptions = {
-                center: location,
-                zoom: 16,
-                panControl: false,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            }
-            var map = new google.maps.Map(mapCanvas, mapOptions);
-
-            var markerImage = 'img/marker.png';
-
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map,
-                icon: markerImage
-            });
-
-            var contentString = '<div class="info-window">' +
-                    '<h3>Info Window Content</h3>' +
-                    '<div class="info-content">' +
-                    '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
-                    '</div>' +
-                    '</div>';
-
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString,
-                maxWidth: 400
-            });
-
-            marker.addListener('click', function () {
-                infowindow.open(map, marker);
-            });
-
-            var styles = [{"featureType": "landscape", "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]}];
-
-            map.set('styles', styles);
+//     if ($('#map').length > 0) {
 
 
-        }
+//         function initMap() {
 
-        google.maps.event.addDomListener(window, 'load', initMap);
+//             var location = new google.maps.LatLng(50.0875726, 14.4189987);
+
+//             var mapCanvas = document.getElementById('map');
+//             var mapOptions = {
+//                 center: location,
+//                 zoom: 16,
+//                 panControl: false,
+//                 mapTypeId: google.maps.MapTypeId.ROADMAP
+//             }
+//             var map = new google.maps.Map(mapCanvas, mapOptions);
+
+//             var markerImage = 'img/marker.png';
+
+//             var marker = new google.maps.Marker({
+//                 position: location,
+//                 map: map,
+//                 icon: markerImage
+//             });
+
+//             var contentString = '<div class="info-window">' +
+//                     '<h3>Info Window Content</h3>' +
+//                     '<div class="info-content">' +
+//                     '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
+//                     '</div>' +
+//                     '</div>';
+
+//             var infowindow = new google.maps.InfoWindow({
+//                 content: contentString,
+//                 maxWidth: 400
+//             });
+
+//             marker.addListener('click', function () {
+//                 infowindow.open(map, marker);
+//             });
+
+//             var styles = [{"featureType": "landscape", "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]}];
+
+//             map.set('styles', styles);
 
 
-    }
+//         }
 
-}
+//         google.maps.event.addDomListener(window, 'load', initMap);
+
+
+//     }
+
+// }
 
 
 
@@ -172,127 +172,127 @@ function menuSliding() {
 
 /* animations */
 
-function animations() {
-    delayTime = 0;
-    $('[data-animate]').css({opacity: '0'});
-    $('[data-animate]').waypoint(function (direction) {
-        delayTime += 150;
-        $(this).delay(delayTime).queue(function (next) {
-            $(this).toggleClass('animated');
-            $(this).toggleClass($(this).data('animate'));
-            delayTime = 0;
-            next();
-            //$(this).removeClass('animated');
-            //$(this).toggleClass($(this).data('animate'));
-        });
-    },
-            {
-                offset: '90%',
-                triggerOnce: true
-            });
+// function animations() {
+//     delayTime = 0;
+//     $('[data-animate]').css({opacity: '0'});
+//     $('[data-animate]').waypoint(function (direction) {
+//         delayTime += 150;
+//         $(this).delay(delayTime).queue(function (next) {
+//             $(this).toggleClass('animated');
+//             $(this).toggleClass($(this).data('animate'));
+//             delayTime = 0;
+//             next();
+//             //$(this).removeClass('animated');
+//             //$(this).toggleClass($(this).data('animate'));
+//         });
+//     },
+//             {
+//                 offset: '90%',
+//                 triggerOnce: true
+//             });
 
-    $('[data-animate-hover]').hover(function () {
-        $(this).css({opacity: 1});
-        $(this).addClass('animated');
-        $(this).removeClass($(this).data('animate'));
-        $(this).addClass($(this).data('animate-hover'));
-    }, function () {
-        $(this).removeClass('animated');
-        $(this).removeClass($(this).data('animate-hover'));
-    });
+//     $('[data-animate-hover]').hover(function () {
+//         $(this).css({opacity: 1});
+//         $(this).addClass('animated');
+//         $(this).removeClass($(this).data('animate'));
+//         $(this).addClass($(this).data('animate-hover'));
+//     }, function () {
+//         $(this).removeClass('animated');
+//         $(this).removeClass($(this).data('animate-hover'));
+//     });
 
-}
+// }
 
-function animationsSlider() {
+// function animationsSlider() {
 
-    var delayTimeSlider = 400;
+//     var delayTimeSlider = 400;
 
-    $('.owl-item:not(.active) [data-animate-always]').each(function () {
+//     $('.owl-item:not(.active) [data-animate-always]').each(function () {
 
-        $(this).removeClass('animated');
-        $(this).removeClass($(this).data('animate-always'));
-        $(this).stop(true, true, true).css({opacity: 0});
+//         $(this).removeClass('animated');
+//         $(this).removeClass($(this).data('animate-always'));
+//         $(this).stop(true, true, true).css({opacity: 0});
 
-    });
+//     });
 
-    $('.owl-item.active [data-animate-always]').each(function () {
-        delayTimeSlider += 500;
+//     $('.owl-item.active [data-animate-always]').each(function () {
+//         delayTimeSlider += 500;
 
-        $(this).delay(delayTimeSlider).queue(function (next) {
-            $(this).addClass('animated');
-            $(this).addClass($(this).data('animate-always'));
+//         $(this).delay(delayTimeSlider).queue(function (next) {
+//             $(this).addClass('animated');
+//             $(this).addClass($(this).data('animate-always'));
 
-            console.log($(this).data('animate-always'));
+//             console.log($(this).data('animate-always'));
 
-        });
-    });
+//         });
+//     });
 
 
 
-}
+// }
 
 /* counters */
 
-function counters() {
+// function counters() {
 
-    $('.counter').counterUp({
-        delay: 10,
-        time: 1000
-    });
+//     $('.counter').counterUp({
+//         delay: 10,
+//         time: 1000
+//     });
 
-}
+// }
 
-function utils() {
+// function utils() {
 
-    /* tooltips */
+//     /* tooltips */
 
-    $('[data-toggle="tooltip"]').tooltip();
+//     $('[data-toggle="tooltip"]').tooltip();
 
-    /* click on the box activates the radio */
+//     /* click on the box activates the radio */
 
-    $('#checkout').on('click', '.box.shipping-method, .box.payment-method', function (e) {
-        var radio = $(this).find(':radio');
-        radio.prop('checked', true);
-    });
-    /* click on the box activates the link in it */
+//     $('#checkout').on('click', '.box.shipping-method, .box.payment-method', function (e) {
+//         var radio = $(this).find(':radio');
+//         radio.prop('checked', true);
+//     });
+//     /* click on the box activates the link in it */
 
-    $('.box.clickable').on('click', function (e) {
+//     $('.box.clickable').on('click', function (e) {
 
-        window.location = $(this).find('a').attr('href');
-    });
-    /* external links in new window*/
+//         window.location = $(this).find('a').attr('href');
+//     });
+//     /* external links in new window*/
 
-    $('.external').on('click', function (e) {
+//     $('.external').on('click', function (e) {
 
-        e.preventDefault();
-        window.open($(this).attr("href"));
-    });
-    /* animated scrolling */
+//         e.preventDefault();
+//         window.open($(this).attr("href"));
+//     });
+//     /* animated scrolling */
 
-    $('.scroll-to, .scroll-to-top').click(function (event) {
+//     $('.scroll-to, .scroll-to-top').click(function (event) {
 
-        var full_url = this.href;
-        var parts = full_url.split("#");
-        if (parts.length > 1) {
+//         var full_url = this.href;
+//         var parts = full_url.split("#");
+//         if (parts.length > 1) {
 
-            scrollTo(full_url);
-            event.preventDefault();
-        }
-    });
-    function scrollTo(full_url) {
-        var parts = full_url.split("#");
-        var trgt = parts[1];
-        var target_offset = $("#" + trgt).offset();
-        var target_top = target_offset.top - 100;
-        if (target_top < 0) {
-            target_top = 0;
-        }
+//             scrollTo(full_url);
+//             event.preventDefault();
+//         }
+//     });
+//     function scrollTo(full_url) {
+//         var parts = full_url.split("#");
+//         var trgt = parts[1];
+//         var target_offset = $("#" + trgt).offset();
+//         var target_top = target_offset.top - 100;
+//         if (target_top < 0) {
+//             target_top = 0;
+//         }
 
-        $('html, body').animate({
-            scrollTop: target_top
-        }, 1000);
-    }
-}
+//         $('html, body').animate({
+//             scrollTop: target_top
+//         }, 1000);
+//     }
+// }
 
 /* product detail gallery */
 
