@@ -1,5 +1,10 @@
 /* your styles go here */
 
-.backgroundstripe {
-	background-color: #f7f7f7;
+.aboutmestripe {
+	background-color: #f7f7f7; overflow: scroll; min-width: 100%;
 }
+
+.stripe { 
+	background-color: #f7f7f7; overflow: scroll; min-width: 100%; 
+}
+
