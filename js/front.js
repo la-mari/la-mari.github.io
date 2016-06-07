@@ -70,19 +70,19 @@ function demo() {
 
 /* sliders */
 
-// function sliders() {
-//     if ($('.owl-carousel').length) {
+function sliders() {
+    if ($('.owl-carousel').length) {
 
 
-//         $(".testimonials").owlCarousel({
-//             items: 4,
-//             itemsDesktopSmall: [1100, 3],
-//             itemsTablet: [768, 2],
-//             itemsMobile: [480, 1]
-//         });
-//     }
+        $(".testimonials").owlCarousel({
+            items: 4,
+            itemsDesktopSmall: [1100, 3],
+            itemsTablet: [768, 2],
+            itemsMobile: [480, 1]
+        });
+    }
 
-// }
+}
 
 // function map() {
 
@@ -172,127 +172,127 @@ function menuSliding() {
 
 /* animations */
 
-// function animations() {
-//     delayTime = 0;
-//     $('[data-animate]').css({opacity: '0'});
-//     $('[data-animate]').waypoint(function (direction) {
-//         delayTime += 150;
-//         $(this).delay(delayTime).queue(function (next) {
-//             $(this).toggleClass('animated');
-//             $(this).toggleClass($(this).data('animate'));
-//             delayTime = 0;
-//             next();
-//             //$(this).removeClass('animated');
-//             //$(this).toggleClass($(this).data('animate'));
-//         });
-//     },
-//             {
-//                 offset: '90%',
-//                 triggerOnce: true
-//             });
+function animations() {
+    delayTime = 0;
+    $('[data-animate]').css({opacity: '0'});
+    $('[data-animate]').waypoint(function (direction) {
+        delayTime += 150;
+        $(this).delay(delayTime).queue(function (next) {
+            $(this).toggleClass('animated');
+            $(this).toggleClass($(this).data('animate'));
+            delayTime = 0;
+            next();
+            //$(this).removeClass('animated');
+            //$(this).toggleClass($(this).data('animate'));
+        });
+    },
+            {
+                offset: '90%',
+                triggerOnce: true
+            });
 
-//     $('[data-animate-hover]').hover(function () {
-//         $(this).css({opacity: 1});
-//         $(this).addClass('animated');
-//         $(this).removeClass($(this).data('animate'));
-//         $(this).addClass($(this).data('animate-hover'));
-//     }, function () {
-//         $(this).removeClass('animated');
-//         $(this).removeClass($(this).data('animate-hover'));
-//     });
+    $('[data-animate-hover]').hover(function () {
+        $(this).css({opacity: 1});
+        $(this).addClass('animated');
+        $(this).removeClass($(this).data('animate'));
+        $(this).addClass($(this).data('animate-hover'));
+    }, function () {
+        $(this).removeClass('animated');
+        $(this).removeClass($(this).data('animate-hover'));
+    });
 
-// }
+}
 
-// function animationsSlider() {
+function animationsSlider() {
 
-//     var delayTimeSlider = 400;
+    var delayTimeSlider = 400;
 
-//     $('.owl-item:not(.active) [data-animate-always]').each(function () {
+    $('.owl-item:not(.active) [data-animate-always]').each(function () {
 
-//         $(this).removeClass('animated');
-//         $(this).removeClass($(this).data('animate-always'));
-//         $(this).stop(true, true, true).css({opacity: 0});
+        $(this).removeClass('animated');
+        $(this).removeClass($(this).data('animate-always'));
+        $(this).stop(true, true, true).css({opacity: 0});
 
-//     });
+    });
 
-//     $('.owl-item.active [data-animate-always]').each(function () {
-//         delayTimeSlider += 500;
+    $('.owl-item.active [data-animate-always]').each(function () {
+        delayTimeSlider += 500;
 
-//         $(this).delay(delayTimeSlider).queue(function (next) {
-//             $(this).addClass('animated');
-//             $(this).addClass($(this).data('animate-always'));
+        $(this).delay(delayTimeSlider).queue(function (next) {
+            $(this).addClass('animated');
+            $(this).addClass($(this).data('animate-always'));
 
-//             console.log($(this).data('animate-always'));
+            console.log($(this).data('animate-always'));
 
-//         });
-//     });
+        });
+    });
 
 
 
-// }
+}
 
 /* counters */
 
-// function counters() {
+function counters() {
 
-//     $('.counter').counterUp({
-//         delay: 10,
-//         time: 1000
-//     });
+    $('.counter').counterUp({
+        delay: 10,
+        time: 1000
+    });
 
-// }
+}
 
-// function utils() {
+function utils() {
 
-//     /* tooltips */
+    /* tooltips */
 
-//     $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
 
-//     /* click on the box activates the radio */
+    /* click on the box activates the radio */
 
-//     $('#checkout').on('click', '.box.shipping-method, .box.payment-method', function (e) {
-//         var radio = $(this).find(':radio');
-//         radio.prop('checked', true);
-//     });
-//     /* click on the box activates the link in it */
+    $('#checkout').on('click', '.box.shipping-method, .box.payment-method', function (e) {
+        var radio = $(this).find(':radio');
+        radio.prop('checked', true);
+    });
+    /* click on the box activates the link in it */
 
-//     $('.box.clickable').on('click', function (e) {
+    $('.box.clickable').on('click', function (e) {
 
-//         window.location = $(this).find('a').attr('href');
-//     });
-//     /* external links in new window*/
+        window.location = $(this).find('a').attr('href');
+    });
+    /* external links in new window*/
 
-//     $('.external').on('click', function (e) {
+    $('.external').on('click', function (e) {
 
-//         e.preventDefault();
-//         window.open($(this).attr("href"));
-//     });
-//     /* animated scrolling */
+        e.preventDefault();
+        window.open($(this).attr("href"));
+    });
+    /* animated scrolling */
 
-//     $('.scroll-to, .scroll-to-top').click(function (event) {
+    $('.scroll-to, .scroll-to-top').click(function (event) {
 
-//         var full_url = this.href;
-//         var parts = full_url.split("#");
-//         if (parts.length > 1) {
+        var full_url = this.href;
+        var parts = full_url.split("#");
+        if (parts.length > 1) {
 
-//             scrollTo(full_url);
-//             event.preventDefault();
-//         }
-//     });
-//     function scrollTo(full_url) {
-//         var parts = full_url.split("#");
-//         var trgt = parts[1];
-//         var target_offset = $("#" + trgt).offset();
-//         var target_top = target_offset.top - 100;
-//         if (target_top < 0) {
-//             target_top = 0;
-//         }
+            scrollTo(full_url);
+            event.preventDefault();
+        }
+    });
+    function scrollTo(full_url) {
+        var parts = full_url.split("#");
+        var trgt = parts[1];
+        var target_offset = $("#" + trgt).offset();
+        var target_top = target_offset.top - 100;
+        if (target_top < 0) {
+            target_top = 0;
+        }
 
-//         $('html, body').animate({
-//             scrollTop: target_top
-//         }, 1000);
-//     }
-// }
+        $('html, body').animate({
+            scrollTop: target_top
+        }, 1000);
+    }
+}
 
 /* product detail gallery */
 
@@ -388,4 +388,81 @@ $(window).resize(function () {
         windowWidth = newWindowWidth;
     }
 
+});
+
+//contact
+
+
+$(function() {
+
+    $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
+        preventSubmit: true,
+        submitError: function($form, event, errors) {
+            // additional error messages or events
+        },
+        submitSuccess: function($form, event) {
+            // Prevent spam click and default submit behaviour
+            $("#btnSubmit").attr("disabled", true);
+            event.preventDefault();
+            
+            // get values from FORM
+            var name = $("input#name").val();
+            var email = $("input#email").val();
+            var phone = $("input#phone").val();
+            var message = $("textarea#message").val();
+            var firstName = name; // For Success/Failure Message
+            // Check for white space in name for Success/Fail message
+            if (firstName.indexOf(' ') >= 0) {
+                firstName = name.split(' ').slice(0, -1).join(' ');
+            }
+            $.ajax({
+                url: "././mail/contact_me.php",
+                type: "POST",
+                data: {
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    message: message
+                },
+                cache: false,
+                success: function() {
+                    // Enable button & show success message
+                    $("#btnSubmit").attr("disabled", false);
+                    $('#success').html("<div class='alert alert-success'>");
+                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                    $('#success > .alert-success')
+                        .append("<strong>Your message has been sent. </strong>");
+                    $('#success > .alert-success')
+                        .append('</div>');
+
+                    //clear all fields
+                    $('#contactForm').trigger("reset");
+                },
+                error: function() {
+                    // Fail message
+                    $('#success').html("<div class='alert alert-danger'>");
+                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                    $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
+                    $('#success > .alert-danger').append('</div>');
+                    //clear all fields
+                    $('#contactForm').trigger("reset");
+                },
+            })
+        },
+        filter: function() {
+            return $(this).is(":visible");
+        },
+    });
+
+    $("a[data-toggle=\"tab\"]").click(function(e) {
+        e.preventDefault();
+        $(this).tab("show");
+    });
+});
+
+// When clicking on Full hide fail/success boxes
+$('#name').focus(function() {
+    $('#success').html('');
 });

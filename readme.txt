@@ -11,6 +11,19 @@ thank you for downloading. Have fun and tell your friends about us ;)
 Ondrej from Bootstrapious
 
 
+---
+**Contact form**
+
+To set up contact form:
+
+1. Upload a template to your webhosting or set up HTTP server on your local machine (XAMPP, WAMP or similar).
+2. Make directory php/temp writeable (change attributes to 777)
+3. Edit the options in contact.php file. The most important are: `$from` and `$sendTo`. The rest can remain as it is.
+
+Thank you for downloading!
+----
+
+
 CSS
 ----------
 
