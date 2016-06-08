@@ -62,7 +62,7 @@ section.background-gray-lightest {
   margin: 0 auto;
 }
 .no-space .box {
-  margin: 0 -15px;
+/*  margin: 0 -15px;*/
 }
 .margin-top {
   margin-top: 30px;
@@ -891,7 +891,13 @@ hr {
   padding: 6px 12px;
   font-size: 16px;
   line-height: 1.55;
+  width: 100%;
+  border-top: 0;
+  margin-top: -9px;
+  background: rgba(255,255,255,0.5);
   border-radius: 0;
+  border: 3px solid #DCE7E8;
+      border-top: 0;
 }
 /****/
 .btn-primary {

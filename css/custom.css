@@ -12,3 +12,14 @@
 	margin-left: 30px;
 	margin-right: 30px;
 }
+
+.borderbox {
+	border-size:1px;
+	border-style:solid;
+	border-color:rgb(220,231,232);
+	border-bottom: 0;
+}
+
+/*.btn:hover{
+	border:1px solid black;
+}*/
