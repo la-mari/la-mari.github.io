@@ -20,6 +20,11 @@
 	border-bottom: 0;
 }
 
+.centered {
+	text-align: center;
+	color: #b3b3ff;
+}
+
 /*.btn:hover{
 	border:1px solid black;
 }*/
